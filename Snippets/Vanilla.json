@@ -172,8 +172,8 @@
             "<prerequisites>",
             "\t<li>$6</li>",
             "</prerequisites>",
-            "<researchViewX>9.00</researchViewX>",
-            "<researchViewY>4.80</researchViewY>",
+            "<researchViewX>$7</researchViewX>",
+            "<researchViewY>$8</researchViewY>",
             "</ResearchProjectDef>"
         ],
         "description": "Basic research XML for Rimworld mod development"
@@ -238,7 +238,7 @@
 
 
     "Vanilla Expanded Framework": {
-        "prefix": "VEF",
+        "prefix": "<VEF>",
         "body": [
             "li>",
             "\tpackageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>",

@@ -15,7 +15,11 @@
     "snippets": [
       {
         "language": "xml",
-        "path": "./Snippets.json"
+        "path": "./Snippets/Vanilla.json"
+      }, 
+      {
+        "language": "xml",
+        "path": "./Snippets/VanillaSnippetsExspanded.json"
       }
     ]    
   },
