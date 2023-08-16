@@ -1,12 +1,14 @@
-//what a file name, am i right guys?
-//guys?
 {
-    "VEF Call": {
-        "prefix": "VE_Framework_Call",
-        "body": [],
-        "description": "Completion for calling the Vanilla Expanded Framework"
-    },
-
-
-        
+  "Vanilla Expanded Framework Call": {
+    "prefix": "<VE_Framework_Call>",
+    "body": [
+      "<li>",
+      "\t<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>",
+      "\t<displayName>Vanilla Expanded Framework</displayName>",
+      "\t<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>",
+      "\t<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>",
+      "</li>"
+    ],
+    "description": "Completion for calling the Vanilla Expanded Framework"
+  }
 }

@@ -1,0 +1,232 @@
+{
+  // VSCode allows these files to be in JSONC format, which allows comments
+
+  //I have decided to make all prefixes contained in <> <- those things
+
+  //"Rimworld XML Header": {
+  //    "prefix": ["Rimworld XML Header"],
+  //    "body": ["<?xml version=\"1.0\" encoding=\"utf-8\"?>"],
+  //    "description": "Rimworld XML Header"
+  //},
+
+  // The rimworld xml header is the same enter Xml Declaration so this is redundant if you have a extension that does that
+
+  "Rimworld Ranged Weapon": {
+    "prefix": ["<RW Weapon>"],
+    "body": [
+      "<ThingDef ParentName=\"BaseHumanMakeableGun\">",
+      "\t<defName>$1</defName>",
+      "\t<label>$2</label>",
+      "\t<description>$3</description>",
+      "\t<graphicData>",
+      "\t\t<texPath>${20| ,Things/Item/Equipment/WeaponRanged/|}$0</texPath>",
+      "\t\t<graphicClass>Graphic_Single</graphicClass>",
+      "\t</graphicData>",
+      "\t<uiIconScale>1</uiIconScale>",
+      "\t<soundInteract>$4</soundInteract>",
+      "\t<statBases>",
+      "\t\t<WorkToMake>$5</WorkToMake>",
+      "\t\t<Mass>$6</Mass>",
+      "\t\t<AccuracyTouch>$7</AccuracyTouch>",
+      "\t\t<AccuracyShort>$8</AccuracyShort>",
+      "\t\t<AccuracyMedium>$9</AccuracyMedium>",
+      "\t\t<AccuracyLong>$10</AccuracyLong>",
+      "\t\t<RangedWeapon_Cooldown>$11</RangedWeapon_Cooldown>",
+      "\t</statBases>",
+      "\t<weaponTags>",
+      "\t\t<li>$12</li>",
+      "\t</weaponTags>",
+      "\t<costList>",
+      "\t\t<Steel>10</Steel>",
+      "\t\t<ComponentIndustrial>1</ComponentIndustrial>",
+      "\t</costList>",
+      "\t<recipeMaker>",
+      "\t\t<skillRequirements>",
+      "\t\t\t<Crafting>$13</Crafting>",
+      "\t\t</skillRequirements>",
+      "\t</recipeMaker>",
+      "\t<verbs>",
+      "\t\t<li>",
+      "\t\t\t<verbClass>Verb_Shoot</verbClass>",
+      "\t\t\t<hasStandardCommand>true</hasStandardCommand>",
+      "\t\t\t<defaultProjectile>$14</defaultProjectile>",
+      "\t\t\t<warmupTime>$15</warmupTime>",
+      "\t\t\t<burstShotCount>$16</burstShotCount>",
+      "\t\t\t<ticksBetweenBurstShots>$17</ticksBetweenBurstShots>",
+      "\t\t\t<range>$18</range>",
+      "\t\t\t<soundCast>Shot_Revolver</soundCast>",
+      "\t\t\t<soundCastTail>GunTail_Light</soundCastTail>",
+      "\t\t\t<muzzleFlashScale>$19</muzzleFlashScale>",
+      "\t\t</li>",
+      "\t</verbs>",
+      "\t<tools>",
+      "\t\t<li>",
+      "\t\t\t<label>handle</label>",
+      "\t\t\t<capacities>",
+      "\t\t\t\t<li>Blunt</li>",
+      "\t\t\t</capacities>",
+      "\t\t\t<power>7</power>",
+      "\t\t\t<cooldownTime>3.1</cooldownTime>",
+      "\t\t</li>",
+      "\t\t<li>",
+      "\t\t\t<label>barrel</label>",
+      "\t\t\t<capacities>",
+      "\t\t\t\t<li>Blunt</li>",
+      "\t\t\t\t<li>Poke</li>",
+      "\t\t\t</capacities>",
+      "\t\t\t<power>5</power>",
+      "\t\t\t<cooldownTime>2.1</cooldownTime>",
+      "\t\t</li>",
+      "\t</tools>",
+      "</ThingDef>"
+    ],
+    "description": "Quick weapon"
+  },
+
+  "Defs": {
+    "prefix": "<Defs>",
+    "body": ["<Defs>", "\t$0", "</Defs>"],
+    "description": "Completion for Defs"
+  },
+
+  "Rimworld Bullet": {
+    "prefix": ["<RW Bullet>"],
+    "body": [
+      "<ThingDef ParentName=\"BaseBullet\">",
+      "<defName>$1</defName>",
+      "<label>$2</label>",
+      "<graphicData>",
+      "\t<texPath>Things/Projectile/Bullet_Small</texPath>",
+      "\t<graphicClass>Graphic_Single</graphicClass>",
+      "\t<drawSize>$3</drawSize>",
+      "</graphicData>",
+      "<projectile>",
+      "\t<damageDef>Bullet</damageDef>",
+      "\t<damageAmountBase>$4</damageAmountBase>",
+      "\t<stoppingPower>$5</stoppingPower>",
+      "\t<speed>$6</speed>",
+      "</projectile>",
+      "</ThingDef>"
+    ]
+  },
+
+  "Rimworld About": {
+    "isFileTemplate": true, // This is a super cool feature that allows you to automatically create a file with the snippet
+    "prefix": ["<RW About>"],
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<ModMetaData>",
+      "\t<name>$1</name>",
+      "\t<author>$2</author>",
+      "\t<packageId>$3</packageId>",
+      "\t<description>$4</description>",
+      "\t<supportedVersions>",
+      "\t\t<li>$5</li>",
+      "\t</supportedVersions>",
+      "</ModMetaData> "
+    ],
+    "description": "About.xml for Rimworld"
+  },
+
+  "Rimworld Version Control": {
+    "prefix": "<Rimworld Version Control>",
+    "body": [
+      "<loadFolders>",
+      "\t<v$1>",
+      "\t\t<li>/</li>",
+      "\t\t<li>$1</li>$0",
+      "\t</v$1>",
+      "</loadFolders>"
+    ],
+    "description": "Basic file for version control"
+  },
+
+  "Rimworld Resource": {
+    "prefix": "Rimworld Resource",
+    "body": [],
+    "description": "Basic item resource for Rimworld"
+  },
+
+  "Rimworld Weapon Melee": {
+    "prefix": "Rimworld Melee",
+    "body": [],
+    "description": "Basic melee weapon XML for Rimworld"
+  },
+
+  "Rimworld Apparel": {
+    "prefix": "Rimworld Apparel",
+    "body": [],
+    "description": "Basic apparel XML for Rimworld"
+  },
+
+  "Rimworld Research": {
+    "prefix": ["Rimworld Research", "rwresearch"],
+    "body": [
+      "<ResearchProjectDef>",
+      "<defName>$1</defName>",
+      "<label>$2</label>",
+      "<description>$3</description>",
+      "<baseCost>$4</baseCost>",
+      "<techLevel>$5</techLevel>",
+      "<prerequisites>",
+      "\t<li>$6</li>",
+      "</prerequisites>",
+      "<researchViewX>$7</researchViewX>",
+      "<researchViewY>$8</researchViewY>",
+      "</ResearchProjectDef>"
+    ],
+    "description": "Basic research XML for Rimworld mod development"
+  },
+
+  "Rimworld Recipe": {
+    "prefix": "Rimworld Recipe",
+    "body": [],
+    "description": "XML for simple recipes in Rimworld"
+  },
+
+  "Rimworld Patch": {
+    "prefix": ["Rimworld Patch", "rwpatch"],
+    "body": [
+      "<Operation Class=\"PatchOperation${1|Replace,Remove,Add,Insert|}\">",
+      "\t<xpath>/Defs/${2||}[defName = \"$3\"]/$4/$5</xpath>",
+      "\t<value>",
+      "\t\t<$5>$0</$5>",
+      "\t</value>",
+      "</Operation>"
+    ],
+    // the value gets changed to the last item in the xpath
+    "description": "XML for patching existing content in Rimworld"
+  },
+
+  "Rimworld Trait": {
+    "prefix": ["Rimworld Trait", "rwtrait"],
+    "body": [
+      "<TraitDef>",
+      "<defName>$1</defName>",
+      "<commonality>${2|1,2,0.5|}</commonality>",
+      "<disabledWorkTags>",
+      "\t<li>$3</li>",
+      "</disabledWorkTags>",
+      "<degreeDatas>",
+      "\t<li>",
+      "\t\t<label>$4</label>",
+      "\t\t<description>$4</description>",
+      "\t\t<degree>1</degree>",
+      "\t\t\t<statOffsets>",
+      "\t\t\t</statOffsets>",
+      "\t\t\t<skillGains>",
+      "\t\t\t</skillGains>",
+      "\t</li>",
+      "</degreeDatas>",
+      "</TraitDef>"
+    ],
+    "description": "XML for adding traits to Rimworld"
+    // This is only a basic template, More complex traits will probably need a lot more.
+  },
+
+  "Mod Dependencies": {
+    "prefix": "<modDependencies>",
+    "body": ["<modDependencies>", "\t$0", "</modDependencies>"],
+    "description": "Completion for mod dependencies"
+  }
+}
