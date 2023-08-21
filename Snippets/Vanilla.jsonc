@@ -83,12 +83,6 @@
     "description": "Quick weapon"
   },
 
-  "Defs": {
-    "prefix": "<Defs>",
-    "body": ["<Defs>", "\t$0", "</Defs>"],
-    "description": "Completion for Defs"
-  },
-
   "Rimworld Bullet": {
     "prefix": ["<RW Bullet>"],
     "body": [
@@ -118,7 +112,7 @@
       "<ModMetaData>",
       "\t<name>$1</name>",
       "\t<author>$2</author>",
-      "\t<packageId>$3</packageId>",
+      "\t<packageId>$2.$3</packageId>",
       "\t<description>$4</description>",
       "\t<supportedVersions>",
       "\t\t<li>$5</li>",
@@ -222,11 +216,5 @@
     ],
     "description": "XML for adding traits to Rimworld"
     // This is only a basic template, More complex traits will probably need a lot more.
-  },
-
-  "Mod Dependencies": {
-    "prefix": "<modDependencies>",
-    "body": ["<modDependencies>", "\t$0", "</modDependencies>"],
-    "description": "Completion for mod dependencies"
   }
 }

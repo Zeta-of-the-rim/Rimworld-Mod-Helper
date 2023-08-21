@@ -1,0 +1,30 @@
+{
+  "Defs": {
+    "prefix": "<Defs>",
+    "body": ["<Defs>", "\t$0", "</Defs>"],
+    "description": "Completion for Defs"
+  },
+
+  "Mod Dependencies": {
+    "prefix": "<modDependencies>",
+    "body": ["<modDependencies>", "\t$0", "</modDependencies>"],
+    "description": "Completion for mod dependencies"
+    
+  },
+  "Li": {
+    "prefix": "<li>",
+    "body": ["<li>$0</li>"],
+    "description": "Completion for list items"
+  },
+  "DefName": {
+    "prefix": "<defName>",
+    "body": ["<defName>$0</defName>"],
+    "description": "Completion for defName",
+    "when": "false"
+  },
+  "ThingDef": {
+    "prefix": "<ThingDef>",
+    "body": ["<ThingDef ParentName=\"$1\">", "\t$0", "</ThingDef>"],
+    "description": "Completion for ThingDef"
+  }
+}

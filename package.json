@@ -1,7 +1,7 @@
 {
   "name": "rimworld-mod-helper",
   "displayName": "RimWorld Mod Helper",
-  "description": "Snippets and tools to help with rimworld mod development",
+  "description": "Snippets and completions to help with rimworld mod development",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.77.0"
@@ -9,19 +9,36 @@
   "categories": [
     "Snippets"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
+  "main": "./extension.js",  
+  "activationEvents": [
+    "onStartupFinished" 
+  ],
   "contributes": {
+    "configuration": {
+      "title": "RimWorld Mod Helper",
+      "properties": {
+        "RwMH.enableCompletions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable minor completions such as <li>"
+        }
+      }
+    },
     "snippets": [
       {
         "language": "xml",
         "path": "./Snippets/Vanilla.jsonc"
-      }, 
+      },
       {
         "language": "xml",
         "path": "./Snippets/VanillaSnippetsExspanded.json"
+      },
+      {
+        "language": "xml",
+        "path": "./Snippets/Completions.jsonc"
+
       }
-    ]    
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
